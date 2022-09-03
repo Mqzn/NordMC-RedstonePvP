@@ -1,0 +1,26 @@
+name: NordMcRedPvP
+main: me.fares.redpvp.RedPvP
+version: 1.0
+author: FARES
+
+commands:
+ stats:
+ ps:
+ top:
+ reset:
+ setspawn:
+ setshop:
+ setshoploc:
+ setlocation:
+ trash:
+ locked:
+ settop:
+  aliases: [remove]
+ setclans:
+ kit:
+ setzone:
+ stat:
+ fire:
+ spec:
+ spawn:
+  aliases: [sp, spa, spaw]

@@ -1,0 +1,32 @@
+# chat-format: "{prefix}{name}&r: {message}"
+
+# Set the format per group.
+# Note: Option for more advanced users. Remove comments to run.
+group-formats:
+  default: "&r{clan} {prestige} &1[Member] {name}&r: {message}"
+  super: "&r{clan} {prestige} &b[Super] {name}&r: {message}"
+  legend: "&r{clan} {prestige} &a[Legend] {name}&r: {message}"
+  miniyt: "&r{clan} {prestige} &5[Mini-YT] {name}&r: {message}"
+  epic: "&r{clan} {prestige} &d[Epic] {name}&r: {message}"
+  nord+: "&r{clan} {prestige} &2[Nord&6+&2] {name}&r: {message}"
+  builder: "&r{clan} {prestige} &3[Builder] {name}&r: {message}"
+  youtuber: "&r{clan} {prestige} &4[You&ftuber&4] {name}&r: {message}"
+  partner: "&r{clan} {prestige} &3[Partner] {name}&r: {message}"
+  helper: "&r{clan} {prestige} &a[Helper]&a {name}&r: {message}"
+  mod: "&r{clan} {prestige} &c[Mod]&c {name}&r: {message}"
+  srmod: "&r{clan} {prestige} &c[SrMod]&c {name}&r: {message}"
+  admin: "&r{clan} {prestige} &4[Admin]&4 {name}&r: {message}"
+  headadmin: "&r{clan} {prestige} &c[Head-Admin]&c {name}&r: {message}"
+  manager: "&r{clan} {prestige} &2[Manager]&2 {name}&r: {message}"
+  owner: "&r{clan} {prestige} &e[Owner]&e {name}&r: {message}"
+  founder: "&r{clan} {prestige} &0[Founder]&0 {name}&r: {message}"
+
+scoreboard:
+  speed: 20
+  title: '&4RedstonePvP'
+  lines:
+    - 'Prestige: <prestige>'
+    - 'Kills: <kills>'
+    - 'Fire: <points>'
+    - 'Deaths: <kills>'
+    - '&6Nord&eMc&6.Net'
