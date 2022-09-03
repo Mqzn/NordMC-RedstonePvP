@@ -29,7 +29,6 @@ public class WaitCode {
                 if (min == 20) {
 
                     RedPvP.getInstance().getStopTite().Run();
-                    RedPvP.getInstance().getCombat().Run();
                     RedPvP.getInstance().getRandomBox1().Run();
                     RedPvP.getInstance().getRandomBox2().Run();
                     RedPvP.getInstance().getdDropParty1().Run();

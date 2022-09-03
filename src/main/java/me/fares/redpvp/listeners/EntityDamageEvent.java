@@ -27,10 +27,10 @@ public class EntityDamageEvent implements Listener {
         if (e.isCancelled()) return;
             Entity entity = e.getEntity();
             DamageCause cause = e.getCause();
-            if (RedPvP.getInstance().getGeometrics().insideSpawn(e.getEntity().getLocation(), RedPvP.getInstance().getLocation("Zone1"), RedPvP.getInstance().getLocation("Zone2")) ||
-                    RedPvP.getInstance().getGeometrics().insideSpawn(e.getEntity().getLocation(), RedPvP.getInstance().getLocation("Zone3"), RedPvP.getInstance().getLocation("Zone4")) ||
-                    RedPvP.getInstance().getGeometrics().insideSpawn(e.getEntity().getLocation(), RedPvP.getInstance().getLocation("Zone5"), RedPvP.getInstance().getLocation("Zone6")) ||
-                    RedPvP.getInstance().getGeometrics().insideSpawn(e.getEntity().getLocation(), RedPvP.getInstance().getLocation("Zone7"), RedPvP.getInstance().getLocation("Zone8"))) {
+            if (RedPvP.getInstance().getGeometrics().insideSpawn(entity.getLocation(), RedPvP.getInstance().getLocation("Zone1"), RedPvP.getInstance().getLocation("Zone2")) ||
+                    RedPvP.getInstance().getGeometrics().insideSpawn(entity.getLocation(), RedPvP.getInstance().getLocation("Zone3"), RedPvP.getInstance().getLocation("Zone4")) ||
+                    RedPvP.getInstance().getGeometrics().insideSpawn(entity.getLocation(), RedPvP.getInstance().getLocation("Zone5"), RedPvP.getInstance().getLocation("Zone6")) ||
+                    RedPvP.getInstance().getGeometrics().insideSpawn(entity.getLocation(), RedPvP.getInstance().getLocation("Zone7"), RedPvP.getInstance().getLocation("Zone8"))) {
                 e.setCancelled(true);
                 return;
             }
@@ -72,7 +72,6 @@ public class EntityDamageEvent implements Listener {
                             RedPvPPlayer playerk = RedPvP.getInstance().getredpvpplayer().get(k);
                             playerk.addKill();
                             player.setKiller(null);
-                            RedPvP.getInstance().getCombat().CombatTite.remove(p);
                             return;
 
 

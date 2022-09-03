@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Pattern;
-import me.fares.redpvp.actionbar.Combat;
+
 import me.fares.redpvp.board.ScoreboardListener;
 import me.fares.redpvp.fireshop.FireMenu;
 import me.fares.redpvp.manager.CoolDown_RandomBox;
@@ -51,9 +51,8 @@ public class RedPvP extends JavaPlugin {
     public static final String NOT_FOUND = "§6Nord§eMc §8┃ §F§cThis player could not be found.";
     public static final String USAGE = "§8┃ §cUsage §8» ";
     private static RedPvP plugin;
-    public Map<Player, RedPvPPlayer> RedPvP_Player = new HashMap();
+    public Map<Player, RedPvPPlayer> RedPvP_Player = new HashMap<>();
     private LuckPerms luckPerms;
-    private Combat combat;
     private MySQL mySQL;
     private NextPS nextPS;
     private PSList psList;
@@ -302,7 +301,6 @@ public class RedPvP extends JavaPlugin {
     }
 
     private void getter() {
-        this.combat = new Combat();
         this.mySQL = new MySQL();
         this.psList = new PSList();
         this.nextPS = new NextPS();
@@ -329,10 +327,6 @@ public class RedPvP extends JavaPlugin {
         this.points = new Points();
         this.geometrics = new Geometrics();
         this.scoreboardListener = new ScoreboardListener();
-    }
-
-    public Combat getCombat() {
-        return this.combat;
     }
 
     public MySQL getMySQL() {

@@ -2,6 +2,7 @@ package me.fares.redpvp.listeners;
 
 import me.fares.redpvp.RedPvP;
 import me.fares.redpvp.board.FastBoard;
+import me.fares.redpvp.combat.CombatManager;
 import me.fares.redpvp.utils.RedPvPPlayer;
 import net.minecraft.server.v1_8_R3.MinecraftServer;
 import org.bukkit.Effect;
@@ -37,6 +38,8 @@ public class QuitEvent implements Listener {
 
         e.setQuitMessage(null);
 
+        CombatManager.getInstance().removeFromCombat(p.getUniqueId());
+
         FastBoard board = RedPvP.getInstance().getScoreboardListener().boards.remove(p.getUniqueId());
         if (board != null) {
             board.delete();
@@ -51,12 +54,6 @@ public class QuitEvent implements Listener {
 
         }
 
-
-        if (RedPvP.getInstance().getCombat().CombatTite.containsKey(p)) {
-            Player k = player.getKiller();
-            SetUpKiller(p, k, player);
-
-        }
         RedPvP.getInstance().getredpvpplayer().remove(p);
 
 
@@ -176,13 +173,12 @@ public class QuitEvent implements Listener {
         }
 
 
-        if (p.getGameMode() == GameMode.CREATIVE) {
-
-        } else {
+        if (p.getGameMode() != GameMode.CREATIVE) {
             p.setLevel(0);
             p.setHealth(20.0);
         }
-        System.out.print(player.getP().getName() + " KILLED BY " + player.getKiller().getName());
+
+        System.out.println(player.getP().getName() + " KILLED BY " + player.getKiller().getName());
         k.playEffect(p.getLocation().add(0, 1, 0), Effect.STEP_SOUND, 152);
 
         MinecraftServer.getServer().postToMainThread(() -> p.setGameMode(GameMode.SURVIVAL));
@@ -205,8 +201,6 @@ public class QuitEvent implements Listener {
 
         //-----------------------------------------------------[Stats]-----------------------------------------------------
 
-        player.setKiller(null);
-        RedPvP.getInstance().getCombat().CombatTite.remove(p);
     }
 
 

@@ -6,7 +6,6 @@ import org.bukkit.GameMode;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
