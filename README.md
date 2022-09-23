@@ -3,7 +3,7 @@ Pure trash plugin that A fraid named "Fares" made for his trash server called "N
 He basically had a `while(true)` in Combat class which made NordMC very laggy (200% CPU) , so i removed all of his combat classes
 and made 2 classes to manage combat.
 
-Other than those 2 classes (`CombatData`, `CombatManager`), everything was written by him
+Other than these 4 classes (`CombatData`, `CombatManager`,`FastBoard` and `FastBoard Reflection`), everything was written by him
 I leaked this, as an example of the worst case redstone pvp plugin as it contains
 
 - Static abuse
