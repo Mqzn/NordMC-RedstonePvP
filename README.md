@@ -1,6 +1,6 @@
 # NordMC-RedStonePvP
 Pure trash plugin that A fraid named "Fares" made for his trash server called "NordMC"
-He basically had a `while(true)` in Combat class so i removed all of his combat classes
+He basically had a `while(true)` in Combat class which made NordMC very laggy (200% CPU) , so i removed all of his combat classes
 and made 2 classes to manage combat.
 
 Other than those 2 classes (`CombatData`, `CombatManager`), everything was written by him
