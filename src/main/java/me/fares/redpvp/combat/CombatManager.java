@@ -2,11 +2,21 @@ package me.fares.redpvp.combat;
 
 import lombok.NonNull;
 import org.jetbrains.annotations.Nullable;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
+/**
+ * My name is Mqzen, i helped fares make a simple combat system using 2 classes
+ * @see CombatData
+ *
+ * Fares is a pure piece of garbage that claims that he is a professional java developer
+ * He basically keep lying about his limits and how good he is at doing things, especially
+ * system administration
+ *
+ * I have helped him, because i felt pity for him and felt that all people wronged him for being a fraud or a scammer
+ * but Sorrowfully, he is a complete fraud and lies/scams for living
+ */
 public final class CombatManager {
 
 	private final @NonNull Map<UUID, CombatData> combatData = new HashMap<>();
